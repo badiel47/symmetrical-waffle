@@ -1,39 +1,38 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
   wokwi_id:     441494442491956225       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "CIMARRON UABC"      # Project title
-  author:       "Joel Badillo"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "decoder that shows CimArron UABC on a 7-seg display"      # One line description of what your project does
-  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     1       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "CIMARRON UABC"          # Project title
+  author:       "Joel Badillo"           # Your name
+  discord:      ""                       # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Decoder that shows Cimarron UABC on a 7-seg display"  # One line description of what your project does
+  language:     "Wokwi"                  # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1                        # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
-
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
-  # Inputs
-  ui[0]: "IN1"
-  ui[1]: "IN2"
-  ui[2]: "IN3"
-  ui[3]: ""
+  # Inputs (character select)
+  ui[0]: "A"
+  ui[1]: "B"
+  ui[2]: "C"
+  ui[3]: "D"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
-  # Outputs
-  uo[0]: "OUT1"
-  uo[1]: "OUT2"
-  uo[2]: "OUT3"
-  uo[3]: "OUT4"
-  uo[4]: "OUT5"
-  uo[5]: "OUT6"
-  uo[6]: "OUT7"
-  uo[7]: "OUT8"
+  # Outputs (7-seg display)
+  uo[0]: "SEG_A"
+  uo[1]: "SEG_B"
+  uo[2]: "SEG_C"
+  uo[3]: "SEG_D"
+  uo[4]: "SEG_E"
+  uo[5]: "SEG_F"
+  uo[6]: "SEG_G"
+  uo[7]: "SEG_DP"   # leave blank "" if DP is not used
 
   # Bidirectional pins
   uio[0]: ""
@@ -46,4 +45,4 @@ pinout:
   uio[7]: ""
 
 # Do not change!
-yaml_version: 6
+yaml_version: 66
